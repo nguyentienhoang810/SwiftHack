@@ -54,3 +54,16 @@ enum ViewSide {
     }
 
 }
+
+extension UIView {
+
+     func addBlur(_ alpha: CGFloat = 0.8) {
+        let effect = UIBlurEffect(style: .light)
+        let effectView = UIVisualEffectView(effect: effect)
+        effectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        effectView.frame = self.bounds
+        effectView.alpha = alpha
+        self.addSubview(effectView)
+    }
+
+}
