@@ -1,0 +1,11 @@
+//show alert anywhere
+private func showAlert() {
+        if let rootVC = UIApplication.shared.keyWindow?.rootViewController {
+            let alert = UIAlertController(title: "Happy Learning", message: "Audio will be download at the first time.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            DispatchQueue.main.async {
+                rootVC.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
