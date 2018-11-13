@@ -1,4 +1,4 @@
-//show alert anywhere
+//show alert anywhere by get rootVC
 private func showAlert() {
         if let rootVC = UIApplication.shared.keyWindow?.rootViewController {
             let alert = UIAlertController(title: "Happy Learning", message: "Audio will be download at the first time.", preferredStyle: .alert)
