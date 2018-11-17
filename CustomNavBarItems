@@ -3,10 +3,9 @@
 private func customRightBarItem() {
         likeBtn.setImage(Resource.Images.like, for: .normal)
         favBtn.setImage(Resource.Images.fav, for: .normal)
-        likeBtn.contentMode = .scaleToFill
+        likeBtn.contentMode = .scaleAspectFill
         favBtn.contentMode = .scaleAspectFill
         let barLikeBtn = UIBarButtonItem(customView: likeBtn)
-        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let barFavBtn = UIBarButtonItem(customView: favBtn)
         likeBtn.addTarget(self, action: #selector(didLike), for: .touchUpInside)
         favBtn.addTarget(self, action: #selector(didFav), for: .touchUpInside)
@@ -16,6 +15,6 @@ private func customRightBarItem() {
         let barFavWidth = barFavBtn.customView?.widthAnchor.constraint(equalToConstant: 40)
         barFavWidth?.isActive = true
         
-        let btns = [barFavBtn, spacer, barLikeBtn]
+        let btns = [barFavBtn, barLikeBtn]
         navigationItem.rightBarButtonItems = btns
     }
