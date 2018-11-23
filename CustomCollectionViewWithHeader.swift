@@ -1,6 +1,6 @@
 class CustomCollectionView {
   private var collectionView: UICollectionView!
-  
+  private let headerID = "headerID"
     //MARK: - layout
     private func addCollectionView() {
         self.backgroundColor = .white
@@ -24,7 +24,9 @@ class CustomCollectionView {
         collectionView.dataSource = self
         
         //MARK: - collection view header setting
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerID)
+        collectionView.register(UICollectionReusableView.self, 
+                                forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, 
+                                withReuseIdentifier: headerID)
         layout.headerReferenceSize = CGSize(width: scrWidth, height: headerHeight)
     }
     
@@ -33,7 +35,8 @@ class CustomCollectionView {
         var v : UICollectionReusableView! = nil
     
         if kind == UICollectionElementKindSectionHeader {
-            v = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerID, for: indexPath)
+            v = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, 
+                                                                withReuseIdentifier: headerID, for: indexPath)
             if v.subviews.count == 0 {
                 v.addSubview(UILabel(frame: CGRect(x: 0, y: 0, width: scrWidth, height: headerHeight)))
             }
