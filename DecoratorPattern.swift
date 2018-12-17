@@ -9,6 +9,7 @@ Concrete Decorator — implementation of Decorator. All structs like Warlord
 
 Perfetct example and explaination here
 https://medium.com/design-patterns-in-swift/design-patterns-in-swift-decorator-pattern-2026e7112869
+https://medium.com/jeremy-codes/decorator-pattern-in-swift-e5fa11ea3c3f
 */
 
 //Core component
