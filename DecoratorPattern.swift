@@ -1,4 +1,16 @@
 
+/*
+Core Component — it is the base class or protocol which our base object will subclass / implement. -- Animal()
+Concrete Component — implemetation (or again, subclass) of Core Component. -- Dog() 
+Decorator — again implementation (or subclass) of Core Component. 
+            Concrete Decorator has capability of wrapping around Components or 
+            other Decorators and building structures. CharacterType protocol is our Decorator here.
+Concrete Decorator — implementation of Decorator. All structs like Warlord, Mage or Epic are Concrete Decorators.
+
+https://medium.com/design-patterns-in-swift/design-patterns-in-swift-decorator-pattern-2026e7112869
+*/
+
+//Core component
 protocol Animal {
   init()
   var name: String { get set }
