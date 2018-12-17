@@ -7,6 +7,7 @@ Decorator — again implementation (or subclass) of Core Component.
             other Decorators and building structures. CharacterType protocol is our Decorator here.
 Concrete Decorator — implementation of Decorator. All structs like Warlord, Mage or Epic are Concrete Decorators.
 
+Perfetct example and explaination here
 https://medium.com/design-patterns-in-swift/design-patterns-in-swift-decorator-pattern-2026e7112869
 */
 
